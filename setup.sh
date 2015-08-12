@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install wget curl
+sudo apt-get install wget curl most
 sudo apt-get install tmux
 
 sudo apt-get install git
