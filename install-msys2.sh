@@ -6,14 +6,14 @@
 
 pacman -Syuu
 
-pacman -S base-devel
-pacman -S msys2-devel
-pacman -S mingw-w64-x86_64_toolchain
-#pacman -S mingw-w64-i686-toolchain
+pacman -S --needed --noconfirm base-devel
+pacman -S --needed --noconfirm msys2-devel
+pacman -S --needed --noconfirm mingw-w64-x86_64-toolchain
+#pacman -S --needed --noconfirm mingw-w64-i686-toolchain
 
 # install msys2 tools.
 
-pacman -S \
+pacman -S --needed --noconfirm \
 	git \
 	subversion \
 	tmux \
@@ -30,7 +30,7 @@ pacman -S \
 	
 # install msys2 tool chain.
 
-pacman -S \
+pacman -S --needed --noconfirm \
 	make \
 	cmake \
 	gcc \
@@ -39,13 +39,13 @@ pacman -S \
 
 # install msys2-wingw64 tools
 
-pacman -S \
+pacman -S --needed --noconfirm \
 	mingw-w64-x86_64-python2 
 	
 # install msys2-wingw64 tool chain.
 	
-pacman -S \
-	mingw-w64-x86_64-cmake \	
-	mingw-w64-x86_64-clang 
+pacman -S --needed --noconfirm \
+	mingw-w64-x86_64-cmake \
+	mingw-w64-x86_64-clang
 
 
