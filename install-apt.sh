@@ -1,26 +1,20 @@
 #!/bin/sh
 
-sudo apt-get install wget curl most
-sudo apt-get install tmux
-sudo apt-get install dos2unix
+apt-get -y install wget curl most
+apt-get -y install tmux
+apt-get -y install dos2unix
+apt-get -y install guake
 
-sudo apt-get install git
+apt-get -y install git
 
-sudo apt-get install openssh-server openssh-client
+apt-get -y install openssh-server openssh-client
 
-sudo apt-get install vim vim-gnome ctags cscope
-sudo apt-get install vim-addon-manager
+apt-get -y install vim vim-gnome ctags cscope
+apt-get -y install vim-addon-manager
 
-sudo apt-get install python python-pip python-dev
-sudo pip install thefuck
+apt-get -y install python2.7 python2.7-dev python-pip
+pip install thefuck
 
-sudo apt-get install \
-    build-essential \
-    cmake \
-    gcc \
-    g++ \
-    automake \
-    autoconf \
-    swig
+apt-get -y install build-essential cmake gcc g++ automake autoconf swig clang
 
 wget -qO- https://get.docker.com/ | sh
