@@ -1,31 +1,47 @@
 #!/bin/sh
 
-sudo apt-add-repository ppa:fish-shell/release-2
-sudo apt update
-sudo apt -y install fish
-sudo chsh -s /usr/bin/fish
+apt-add-repository ppa:synapse-core/ppa
+add-apt-repository ppa:linrunner/tlp
+apt-add-repository ppa:fish-shell/release-2
+apt update
 
-sudo apt -y install wget curl most
-sudo apt -y install tmux
-sudo apt -y install dos2unix
-sudo apt -y install guake
-sudo apt -y install cde
+apt -y install synapse
+apt -y install tlp
+tlp start
+apt -y install fish
+chsh -s /usr/bin/fish
 
-sudo apt -y install git
+apt -y install powertop
+apt -y install gparted
+apt -y install gdebi
 
-sudo apt -y install openssh-server openssh-client
+apt -y install \
+    wget curl most htop \
+    tmux \
+    dos2unix \
+    guake \
 
-sudo apt -y install vim vim-gnome ctags cscope
-sudo apt -y install vim-addon-manager
+apt -y install \
+    git subversion
 
-sudo apt -y install python python-pip python-dev
-sudo pip install thefuck
+apt -y install \
+    openssh-server openssh-client
 
-sudo apt -y install \
+apt -y install \
+    vim vim-gnome vim-addon-manager \
+    ctags cscope
+
+apt -y install \
+    python2.7 python2.7-dev python-pip \
+    python3 python3-pip
+
+pip install --upgrade pip
+pip install thefuck
+pip3 install --upgrade pip
+
+apt -y install \
     build-essential cmake \
-    gcc g++ clang \
-    automake autoconf
-
-sudo apt -y install swig cde
-
-wget -qO- https://get.docker.com/ | sh
+    gcc g++ gdb clang \
+    automake autoconf \
+    swig \
+    cde
