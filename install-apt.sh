@@ -14,12 +14,13 @@ chsh -s /usr/bin/fish
 apt -y install powertop
 apt -y install gparted
 apt -y install gdebi
+apt -y install sysstat
 
 apt -y install \
     wget curl most htop \
     tmux \
     dos2unix \
-    guake \
+    guake
 
 apt -y install \
     git subversion
