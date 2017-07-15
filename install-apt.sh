@@ -20,7 +20,8 @@ apt -y install \
     wget curl most htop \
     tmux \
     dos2unix \
-    guake
+    guake \
+    p7zip-full
 
 apt -y install \
     git subversion
