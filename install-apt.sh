@@ -24,7 +24,8 @@ apt -y install \
     p7zip-full
 
 apt -y install \
-    git subversion
+    git subversion \
+    tig
 
 apt -y install \
     openssh-server openssh-client
